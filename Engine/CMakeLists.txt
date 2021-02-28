@@ -28,6 +28,8 @@ add_library(
 target_include_directories(${TARGET_NAME} PUBLIC include)
 target_include_directories(${TARGET_NAME} PRIVATE src)
 
+target_link_libraries(${TARGET_NAME} PRIVATE glfw)
+
 if (CMAKE_BUILD_TYPE EQUAL "DEBUG")
     add_compile_definitions(SY_DEBUG)
 endif()
